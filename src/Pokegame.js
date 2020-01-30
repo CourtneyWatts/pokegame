@@ -44,7 +44,7 @@ class Pokegame extends Component {
     })
     shuffle(cards)
     const hand1 = cards.slice(0, 4)
-    const hand2 = cards.slice(4)
+    const hand2 = cards.slice(4,8)
     let xp1 = hand1.reduce((exp, pokemon)=> {
       return exp + pokemon.props.xp
     },0)
