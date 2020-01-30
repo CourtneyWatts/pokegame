@@ -1,0 +1,25 @@
+.winner{
+  color: rgb(116, 255, 116);
+  font-weight: 700;
+}
+.loser{
+  color: rgb(253, 125, 125);
+  font-weight: 700;
+}
+h4 {
+  margin:0;
+  font-weight: 600;
+  color: white;
+}
+.Pokedex-player{
+  color: rgb(99, 99, 99);
+  background-color:  lightgray;
+  padding: 10px 35px;
+  border-radius: 5px;
+  font-weight: 800;
+  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-right: 100px;
+}
+.Pokedex-details {
+  margin-left: 228px;
+}

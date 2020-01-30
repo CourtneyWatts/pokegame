@@ -5,9 +5,31 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #3a3a3a;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.small-screen-text{
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+@media (max-width: 1200px) {
+
+  .game {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .small-screen-text{
+    display: none;
+  }
+  .game {
+    display: block;
+  }
 }
