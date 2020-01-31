@@ -61,10 +61,24 @@ class Pokegame extends Component {
     let xp2 = hand2.reduce((exp, pokemon)=> {
       return exp + pokemon.props.xp
     },0)
+    let hand1Result = 'draw';
+    let hand2Result = 'draw'
+    if (xp1 !== xp2){
+      if (xp1>xp2){
+        hand1Result = 'winner'
+        hand2Result = 'loser'
+      } else {
+        hand1Result = 'loser'
+        hand2Result = 'winner'
+      }
+    }
+
+
+
     return (
       <div className='game container'>
-        <Pokedex deck={1} hand={hand1} xp={xp1} isWinner={(xp1 > xp2) ? true : false}/>
-        <Pokedex deck={2} hand={hand2} xp={xp2} isWinner={(xp2 > xp1) ? true : false}/>
+        <Pokedex deck={1} hand={hand1} xp={xp1} handResult={hand1Result}/>
+        <Pokedex deck={2} hand={hand2} xp={xp2} handResult={hand2Result}/>
         <div onClick={()=>{this.handleClick()}} className="Pokegame-play-again d-flex align-items-center justify-content-center">
           <div >
             Play Again
