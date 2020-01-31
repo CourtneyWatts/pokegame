@@ -1,26 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,800&display=swap');
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #3a3a3a;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 .small-screen-text{
   font-size: 30px;
   font-weight: bold;
   color: white;
 }
-
 @media (max-width: 1200px) {
-
   .game {
     display: none;
   }

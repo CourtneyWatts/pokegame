@@ -1,18 +1,19 @@
 .winner{
   color: rgb(116, 255, 116);
-  font-weight: 700;
+  font-weight: 800;
 }
 .loser{
   color: rgb(253, 125, 125);
-  font-weight: 700;
+  font-weight: 800;
 }
 .draw {
   color: rgb(209, 206, 206);
-  font-weight: 700;
+  font-weight: 800;
 }
 h4 {
   margin:0;
-  font-weight: 600;
+  font-family: Helvetica, sans-serif;
+  font-weight: 400;
   color: white;
 }
 .Pokedex-player{
