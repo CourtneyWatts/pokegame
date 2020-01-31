@@ -40,7 +40,7 @@ class Pokegame extends Component {
         counter: 3
       })
       
-    }, 2000)
+    }, 1000)
     
    
   }
