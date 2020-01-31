@@ -3,8 +3,9 @@ import Pokedex from './Pokedex'
 import pokedexListing from './pokedexListing'
 import PokeCard from './PokeCard'
 import './Pokegame.css'
-import {Animated} from "react-animated-css";
 import redo from './images/redo.svg'
+
+
 
 
 
@@ -28,11 +29,20 @@ class Pokegame extends Component {
   }
 
   handleClick(){
-    const redoButton = document.querySelector('.Pokegame-redo')
+    const redoButton = document.querySelector('.Pokegame-play-again')
+    if (redoButton.classList.contains('active')){
+      return
+    }
     redoButton.classList.add('active')
-    this.setState({
-      counter: 3
-    })
+    setTimeout(()=> {
+      redoButton.classList.remove('active')
+      this.setState({
+        counter: 3
+      })
+      
+    }, 2000)
+    
+   
   }
   render() {
     const cards = this.props.pokemon.map(function (p) {
@@ -53,10 +63,8 @@ class Pokegame extends Component {
     },0)
     return (
       <div className='game container'>
-        <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
         <Pokedex deck={1} hand={hand1} xp={xp1} isWinner={(xp1 > xp2) ? true : false}/>
         <Pokedex deck={2} hand={hand2} xp={xp2} isWinner={(xp2 > xp1) ? true : false}/>
-        </Animated>
         <div onClick={()=>{this.handleClick()}} className="Pokegame-play-again d-flex align-items-center justify-content-center">
           <div >
             Play Again
